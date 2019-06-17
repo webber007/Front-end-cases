@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=" utf-8">
+<meta name="author" content="http://www.softwhy.com/" />
+<title>左右两栏宽度自适应，中间一栏宽度固定</title>
+<style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  min-width: 620px;
+}
+#left, #right {
+  float: left;
+  width: 50%;
+  margin: 0 0 0 -151px;
+}
+#innerLeft, #innerRight {
+  margin: 0 0 0 151px;
+  background-color: #efefef;
+}
+#middle {
+  float: left;
+  width: 300px;
+  background-color: #ccc;
+}
+.inner {
+  padding: 12px;
+}
+</style>
+</head>
+<body>
+<div id="left">
+  <div id="innerLeft" class="inner">左栏</div>
+</div>
+<div id="middle">
+  <div id="innerMiddle" class="inner">中栏</div>
+</div>
+<div id="right">
+  <div id="innerRight" class="inner">右栏</div>
+</div>
+
+<div>
+一.实现原理:<br />
+
+1.将左右两栏的做外边距设置为-150px，这样就可以在左右两栏之间置留出中栏的位置，宽度为300px。<br />
+
+2.然后将左右两栏的子div的左边距设置为150px，这样左右两栏的内容就可以在非父元素的“-150px外边距区域”显示。<br />
+
+基于以上原理实现了中间固定，左右两栏宽度自适应效果。<br />
+
+二.知识点说明:<br />
+
+1.按照实现原理，左右外边距的值应该是-150px，但是实际值确实-151px，这是因为IE6和IE7浏览器对宽度的百分比像是处理并不够理想，所以要增加一像素的外边距大小，否则可能会出现换行的可能。<br />
+
+2.点击可以参阅IE6浏览器百度百分比处理
+</div>
+</body>
+</html>

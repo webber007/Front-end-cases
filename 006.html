@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css3流行效果</title>
+<style>
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.space {
+  width: 100%;
+  height: 100%;
+  background: #000 url(./images/xingkong.jpg);
+}
+.star {
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+  top: 0px;
+  left: 20%;
+  position: relative;
+  animation: star-ani 3s infinite ease-out;
+  box-shadow: 0 0 5px 5px rgba(255,255,255,.3);
+  opacity: 0;
+  z-index: 2;
+}
+.star:after {
+  content: '';
+  display: block;
+  top: 0px;
+  left: 4px;
+  border: 0px solid #fff;
+  border-width: 0px 90px 2px 90px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, .3);
+  transform: rotate(-45deg) translate3d(1px,2px,0);
+  box-shadow: 0 0 1px 0 rgba(255, 255, 255, .3);
+  transform-origin: 0% 0%;
+}
+.pink {
+  top: 0px;
+  left: 40%;
+  background: #F9C;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.pink:after {
+  border-color: transparent transparent transparent #F9C;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.blue {
+  top: 0px;
+  left: 60%;
+  background: #93CCE1;
+  -webkit-animation-delay: 5.5s;
+  -moz-animation-delay: 5.5s;
+  animation-delay: 5.5s;
+}
+.blue:after {
+  border-color: transparent transparent transparent #93CCE1;
+  -webkit-animation-delay: 5.5s;
+  -moz-animation-delay: 5.5s;
+  animation-delay: 5.5s;
+}
+.yellow {
+  top: 0px;
+  left: 80%;
+  background: #ffcd5c;
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  animation-delay: 3s;
+}
+.yellow:after {
+  border-color: transparent transparent transparent #ffcd5c;
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  animation-delay: 3s;
+}
+.purple {
+  top: 0px;
+  left: 95%;
+  background: #CCF;
+  -webkit-animation-delay: 7.8s;
+  -moz-animation-delay: 7.8s;
+  animation-delay: 7.8s;
+}
+.purple:after {
+  border-color: transparent transparent transparent #CCF;
+  -webkit-animation-delay: 7.8s;
+  -moz-animation-delay: 7.8s;
+  animation-delay: 7.8s;
+}
+@keyframes star-ani {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) rotate(0) translate3d(0, 0, 0);
+    -moz-transform: scale(0) rotate(0) translate3d(0, 0, 0);
+    transform: scale(0) rotate(0) translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+    -moz-transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+    transform: scale(1) rotate(0) translate3d(-200px, 200px, 0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+    -moz-transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+    transform: scale(1) rotate(0) translate3d(-300px, 300px, 0);
+  }
+}
+</style>
+</head>
+<body>
+  <div class="space">
+    <div class="stars">
+      <div class="star"></div>
+      <div class="star pink"></div>
+      <div class="star blue"></div>
+      <div class="star yellow"></div>
+      <div class="star purple"></div>
+    </div>
+  </div>
+</body>
+</html>

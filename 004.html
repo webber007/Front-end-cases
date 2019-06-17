@@ -1,0 +1,21 @@
+<html>
+  <head><title>shadow dom</title></head>
+  <body>
+
+    <!-- <p id="hostElement"></p>
+    <script>
+      // create shadow DOM on the <p> element above
+      var shadow = document.querySelector('#hostElement').attachShadow({mode: 'open'});
+      shadow.innerHTML = '<p>Here is some new text</p>';
+      shadow.innerHTML += '<style>p { color: red; }</style>';
+    </script> -->
+    <video src="http://act.ci123.com/flv/up/ori/20190610/5cfe03be7a03a.mp4" poster="http://file2.ci123.com/act/flv/up/jpg/20190610/5cfe03be7a03a.jpg" frameborder="0" width="320" height="180" preload="auto" autoplay="autoplay" webkit-playsinline="true" controls="controls" id="myvideo"></video>
+
+    <style>
+    video::-webkit-media-controls-play-button{background: red;position:absolute;left:100px;top:100px;}
+    video::-webkit-media-controls-fullscreen-button{display: none;}
+    video::-internal-media-controls-overflow-button{display: none;}
+    </style>
+    
+  </body>
+</html>

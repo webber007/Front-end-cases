@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=" utf-8">
+<meta name="author" content="http://www.softwhy.com/" />
+<title>jQuery邮箱格式验证代码</title>
+<script src="https://act.ci123.com/global/js/jquery/min/jquery-1.11.3.min.js" language="javascript"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  $("#bt").click(function () {
+    if ($("#email1").val() == "") {
+      alert("邮箱不能为空");
+      return false;
+    }
+    var email = $("#email1").val();
+    if (!email.match(/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/)) {
+      alert("格式不正确！请重新输入");
+      $("#email1").focus();
+    }
+  })
+})
+</script>
+</head>
+<body>
+  <form action="#">
+    <input type="text" id="email1">
+    <input type="button" value="提交" id="bt">
+  </form>
+</body>
+</html>

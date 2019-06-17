@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="http://www.softwhy.com/" />
+<title>float:right换行问题</title>
+<style>
+div{
+  width:50px;
+  height:50px;
+}
+.float_right{
+  background:red;
+  float:left;
+}
+.right{
+  background:blue;
+}
+</style> 
+</head> 
+<body> 
+<div class="clear_right"></div>
+<div class="float_right"></div>
+
+第二个div右浮动，按照原理，它脱离文档流不受正常文档流的羁绊，可以与前一个div元素位于同一行，但是事实却换行了。其实这里有这么一个规则:任何浮动元素都不可能超过原来所处文档流位置的上边界。
+</body> 
+</html>
